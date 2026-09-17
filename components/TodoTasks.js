@@ -17,18 +17,16 @@ export function TodoTasks({todoItems}){
             <Text style={styles.todoDescription}>{item.description}</Text>
             <View style={styles.todoButtonRow}>
               <View style={styles.todoButton}>
-                <Button
-                  title="Complete Task"
-                  color="#a6e3a1"
-                  onPress={() => console.log("Complete:", item.id)}
-                />
+                <Pressable
+                  onPress={() => Alert.alert("Complete:", item.id)}
+                  style={styles.pressable1}
+                > <Text>Complete Task</Text></Pressable>
               </View>
               <View style={styles.todoButton}>
-                <Button
-                  title="Delete Task"
-                  color="#f38ba8"
-                  onPress={() => console.log("Delete:", item.id)}
-                />
+                <Pressable
+                  onPress={() => Alert.alert("Delete:", item.id)}
+                  style={styles.pressable2}
+                > <Text>Delete Task</Text></Pressable>
               </View>
             </View>
           </View>
@@ -99,4 +97,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: colors.overlay,
   },
+   pressable1:{
+    backgroundColor: '#a6e3a1',
+    padding: 10,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  pressable2:{
+    backgroundColor: '#f38ba8',
+    padding: 10,
+    borderRadius: 8,
+    alignItems: 'center',
+  }
 });

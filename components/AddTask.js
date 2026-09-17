@@ -22,18 +22,20 @@ export function AddTask() {
 
       <View style={styles.ctaRow}>
         <View style={styles.ctaButton}>
-          <Button
-            title="Try Now"
-            color="#89b4fa"
-            onPress={() => console.log("Try Now pressed")}
-          />
+        <Pressable
+          style={styles.pressable1}
+          onPress={() => Alert.alert("Try Now pressed")}
+        >
+          <Text>Try Now</Text>
+        </Pressable>
         </View>
         <View style={styles.ctaButton}>
-          <Button
-            title="Create Account"
-            color="#cba6f7"
-            onPress={() => console.log("Create Account pressed")}
-          />
+        <Pressable
+          style={styles.pressable2}
+          onPress={() => Alert.alert("Try Now pressed")}
+        >
+          <Text>Create Account</Text>
+        </Pressable>
         </View>
       </View>
     </View>
@@ -82,5 +84,17 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 12,
   },
+  pressable1:{
+    backgroundColor: '#89b4fa',
+    padding: 12,
+    borderRadius: 10,
+    alignItems: 'center',
+  },
+  pressable2:{
+    backgroundColor: '#cba6f7',
+    padding: 12,
+    borderRadius: 10,
+    alignItems: 'center',
+  }
 
 });
